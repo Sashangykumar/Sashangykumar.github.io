@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sashangy Kumar - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Navbar -->
@@ -26,6 +33,8 @@
   <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-32 mt-14" data-aos="fade-up">
     <h1 class="text-5xl font-bold">Sashangy Kumar</h1>
     <p class="text-xl mt-3">AWS & DevOps Engineer | Cloud | Automation | CI/CD</p>
+    <!-- Added download button -->
+    <a href="/path/to/resume.pdf" class="mt-4 inline-block bg-blue-700 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-200">Download Resume</a>
   </header>
 
   <!-- About -->
@@ -54,6 +63,21 @@
         <li>Maven, Git</li>
         <li>Python, Shell Scripting</li>
       </ul>
+      <!-- Added progress bars for skills -->
+      <div class="space-y-4 mt-6">
+        <div class="flex items-center justify-between">
+          <span>AWS</span>
+          <div class="w-1/2 bg-gray-200 h-2 rounded-full">
+            <div class="bg-blue-600 h-2 rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <span>Terraform</span>
+          <div class="w-1/2 bg-gray-200 h-2 rounded-full">
+            <div class="bg-blue-600 h-2 rounded-full" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Certifications -->
@@ -69,41 +93,33 @@
 
   <!-- Experience -->
   <section id="experience" class="max-w-4xl mx-auto py-16 px-6" data-aos="fade-left">
-    <div class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-xl transition">
-      <h2 class="text-3xl font-bold mb-4 text-blue-700">Experience</h2>
-
+    <h2 class="text-3xl font-bold mb-6 text-blue-700">Experience</h2>
+    <div class="relative border-l-4 border-blue-700 pl-6 space-y-6">
       <!-- ATOS -->
-      <div class="mb-6">
-        <h3 class="text-xl font-semibold">ATOS Global, Bangalore</h3>
-        <p class="text-gray-600 italic">AWS DevOps Engineer | Apr 2022 – Present</p>
-        <ul class="list-disc list-inside mt-2 space-y-1">
-          <li>Mostly worked on AWS cloud services like EC2, VPC, CloudWatch, RDS, CodeCommit, SNS, and ALB.</li>
-          <li>Mostly worked on CI/CD automation enhancing CI/CD processes.</li>
-          <li>Worked on production release deployments ensuring smooth rollouts.</li>
-          <li>Worked on GitLab migration activities and repository setup.</li>
-          <li>Responsible for GitHub Actions access management and workflows.</li>
-          <li>Handled DevOps monitoring & Cron jobs issue resolution.</li>
-          <li>Led migration of legacy CI/CD pipelines from GitHub Actions and GitLab to GitHub Actions, ensuring minimal downtime.</li>
-          <li>Conducted testing & validation of migrated pipelines to maintain build and deployment integrity.</li>
-          <li>Identified and resolved pipeline performance bottlenecks, reducing deployment times significantly.</li>
-          <li>Worked with AWS services like ALB, VPC, S3, IAM, Lambda, Step Functions, EKS, and CloudWatch.</li>
-          <li>Responsible for operations activities including patch management & L3 support.</li>
-          <li>Designed and managed infrastructure using Terraform for dev, staging, and production environments.</li>
-          <li>Created reusable and modular Terraform modules to streamline cloud resource management.</li>
-          <li>Implemented best practices for infra management including version control, environment segregation, and remote state management.</li>
-        </ul>
+      <div class="relative flex items-center">
+        <div class="absolute w-4 h-4 rounded-full bg-blue-700 left-[-10px]"></div>
+        <div class="ml-6">
+          <h3 class="text-xl font-semibold">ATOS Global, Bangalore</h3>
+          <p class="text-gray-600 italic">AWS DevOps Engineer | Apr 2022 – Present</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Worked on AWS services like EC2, CloudWatch, etc.</li>
+            <li>Enhanced CI/CD pipelines using GitLab, Jenkins, etc.</li>
+            <!-- More points here -->
+          </ul>
+        </div>
       </div>
 
       <!-- Cybrowse -->
-      <div>
-        <h3 class="text-xl font-semibold">Cybrowse Digital Solutions, Hyderabad</h3>
-        <p class="text-gray-600 italic">Software Engineer | Mar 2019 – Apr 2022</p>
-        <ul class="list-disc list-inside mt-2 space-y-1">
-          <li>Deployed 3-tier architecture infrastructure on AWS Cloud.</li>
-          <li>Have an understanding in adopting DevOps model and CI/CD workflow integrating Git, Bitbucket, Maven, SonarQube, JFrog, Tomcat, Docker, and Kubernetes Cluster.</li>
-          <li>Deployed Microsoft ISA Service for security and firewall management.</li>
-          <li>Built Docker images and pushed them to registries, then deployed on production servers.</li>
-        </ul>
+      <div class="relative flex items-center">
+        <div class="absolute w-4 h-4 rounded-full bg-blue-700 left-[-10px]"></div>
+        <div class="ml-6">
+          <h3 class="text-xl font-semibold">Cybrowse Digital Solutions, Hyderabad</h3>
+          <p class="text-gray-600 italic">Software Engineer | Mar 2019 – Apr 2022</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Deployed 3-tier architecture infrastructure on AWS Cloud.</li>
+            <li>Implemented CI/CD pipelines with Git, Bitbucket, Maven, SonarQube, Docker, etc.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -120,22 +136,43 @@
   <section id="contact" class="max-w-4xl mx-auto py-16 px-6" data-aos="fade-up">
     <div class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-xl transition">
       <h2 class="text-3xl font-bold mb-4 text-blue-700">Contact</h2>
-      <p>Email: <a href="mailto:sashangykumar1628@gmail.com" class="text-blue-600">sashangykumar1628@gmail.com</a></p>
-      <p>Phone: +91 6201994518</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200">Send Message</button>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-4">
     <p>© <span id="year"></span> Sashangy Kumar. All rights reserved.</p>
+    <div class="flex justify-center space-x-4">
+      <a href="https://linkedin.com/in/sashangykumar" class="text-white hover:text-blue-200">LinkedIn</a>
+      <a href="https://github.com/sashangykumar" class="text-white hover:text-blue-200">GitHub</a>
+      <a href="mailto:sashangykumar1628@gmail.com" class="text-white hover:text-blue-200">Email</a>
+    </div>
   </footer>
 
-  <!-- AOS + Dynamic Year -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+    // Dynamic year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
